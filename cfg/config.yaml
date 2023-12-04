@@ -1,0 +1,58 @@
+#world model replay buffer
+buffer_size: 5_000_000
+env_name: 'starpilot'
+agent_path: 'models/best.pt'
+world_model_path: "models/wm_${num_levels}.pt"
+batch_size: 32
+num_envs: 1
+gamma: 0.999
+wandb: True
+num_updates: 25_000_000
+num_levels: 0
+capture_video: False
+
+
+#model params
+jumps: 5
+spr: 1
+augmentation:
+  - "shift"
+  - "intensity"
+save_frequency: 100
+target_augmentation: 1
+eval_augmentation: 0
+dynamics_blocks: 0
+norm_type: "bn"
+noisy_nets: 1
+aug_prob: 1
+classifier: "mlp"
+imagesize: 64
+time_offset: 0
+local_spr: 0
+global_spr: 1
+momentum_encoder: 1
+shared_encoder: 0
+momentum_tau: 0.01
+renormalize: 1
+q_l1_type:
+  - "value"
+  - "advantage"
+dropout: 0
+final_classifier: "linear"
+model_rl: 0
+residual_tm: 0
+lr: 1e-4
+
+
+
+
+
+
+
+
+
+
+#hydra config
+hydra:
+  job :
+    chdir: False

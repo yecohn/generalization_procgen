@@ -1,3 +1,11 @@
 __pydata__
+__pycache__
 .vscode*
-*.pth
+*.pt
+*.mp4
+*.json
+wandb
+videos
+models
+outputs
+runs
